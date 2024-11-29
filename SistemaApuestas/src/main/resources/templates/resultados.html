@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados Eventos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+<div class="container mt-5">
+    <!-- Mostrar el saldo actual -->
+    <div class="text-right mb-4">
+        <h4>💰 Saldo actual: <span class="text-success" th:text="${saldo} + ' COP'">0 COP</span></h4>
+    </div>
+
+    <!-- Título de la página -->
+    <h1 class="text-center">Resultados Eventos</h1>
+
+    <!-- Tabla de Resultados -->
+    <div class="mt-4">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Evento</th>
+                <th>Resultados por Equipo</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="entry : ${resultados}">
+                <td th:text="${entry.key}"></td>
+                <td>
+                    <ul>
+                        <li th:each="tipo, valor : ${entry.value}" th:text="${tipo}"></li>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Estado de las Apuestas -->
+    <div class="mt-4">
+        <h2>Estado de las Apuestas</h2>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Evento</th>
+                <th>Tipo de Apuesta</th>
+                <th>Equipo</th>
+                <th>Monto Apostado</th>
+                <th>Detalle</th>
+                <th>Resultado</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="apuesta : ${apuestas}">
+                <td th:text="${apuesta.evento}"></td>
+                <td th:text="${apuesta.tipo}"></td>
+                <td th:text="${apuesta.equipo}"></td>
+                <td th:text="${apuesta.monto} + ' USD'"></td>
+                <td th:text="${apuesta.detalle}"></td>
+                <td>
+                    <span th:if="${apuesta.ganadora}" class="text-success">Ganadora</span>
+                    <span th:if="${!apuesta.ganadora}" class="text-danger">Perdedora</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a href="/" class="btn btn-link mt-3">Volver al inicio</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

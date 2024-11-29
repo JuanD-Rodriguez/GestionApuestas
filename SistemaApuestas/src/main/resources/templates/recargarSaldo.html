@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recargar Saldo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2rem;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .btn-recargar {
+            background-color: #28a745;
+            color: #fff;
+        }
+        .btn-recargar:hover {
+            background-color: #218838;
+            color: #fff;
+        }
+        .btn-volver {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container text-center">
+    <h1 class="mb-4">💰 Recargar Saldo</h1>
+    <form action="/recargar-saldo" method="post">
+        <div class="mb-3">
+            <label for="monto" class="form-label">Cantidad a recargar:</label>
+            <input type="number" id="monto" name="monto" min="1" class="form-control" placeholder="Ingresa el monto" required>
+        </div>
+        <button type="submit" class="btn btn-recargar w-100">Recargar</button>
+    </form>
+    <a href="/" class="btn btn-outline-secondary btn-volver w-100 mt-3">Volver al inicio</a>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

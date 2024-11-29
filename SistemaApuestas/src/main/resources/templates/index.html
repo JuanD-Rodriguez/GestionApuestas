@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Apuestas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+<header class="header text-center py-3">
+    <img src="/static/logo.png" alt="Logo" class="logo mb-3">
+    <h1>Bienvenido al Sistema de Apuestas</h1>
+</header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/iniciar-sesion">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/registro">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/resultados">Ver Resultados</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/realizar-apuesta">Realizar Apuesta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/recargar-saldo">Recargar Saldo</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/ver-apuestas">Ver Apuestas</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="content container mt-5">
+    <h2 class="text-center">¡Explora y realiza tus apuestas!</h2>
+    <p class="text-center">Selecciona una de las opciones del menú para empezar.</p>
+</main>
+<footer class="footer text-center py-4 mt-5 bg-light">
+    <p>&copy; 2024 Sistema de Apuestas. Todos los derechos reservados.</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

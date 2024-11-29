@@ -1,0 +1,3 @@
+Juan Rodriguez,juandavidrh02@gmail.com,123456
+David Hernandez,drodriguez@gmail.com,123456
+Juan David,juanchopte13@gmail.com,123456
